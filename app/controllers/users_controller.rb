@@ -32,6 +32,7 @@ post '/create_user' do
     redirect to("/user_profile/#{user.id}")
   else
     #@errors = @user.errors
+    puts ">" * 50
     redirect to('/')
   end
 end
