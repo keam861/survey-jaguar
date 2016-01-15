@@ -4,7 +4,7 @@
     <h1 class="">Welcome to Jaguar Survey</h1>
     <div id="sigin">
       <h2>Sign In</h2>
-      <form id="signin" action="" method="">
+      <form id="signin" action="/create_session" method="post">
         <input autofocus type="email" name"email" placeholder="Email" size="35"></input>
         <br>
         <input type="password" name"password" placeholder="Password" size="35"></input>
@@ -17,14 +17,15 @@
 
     <div id="signup">
       <h2>Sign Up</h2>
-      <form action="/" method="post">
-        <input type="text" name"user_name" placeholder="User" size="35"></input>
+      <form name="signup" action="/create_user" method="post">
+        <input type="text" name="user[name]" id="contact_name" placeholder="User" size="35"></input>
         <br>
-        <input type="email" name"email" placeholder="Email" size="35"></input>
+        <input type="email" name="user[email]" placeholder="Email" size="35"></input>
         <br>
-        <input type="password" name"password" placeholder="Password" size="35"></input>
+        <input type="password" name="user[password]" placeholder="Password" size="35"></input>
         <br>
         <input class="button" type="submit" value="Sign Up"></input>
+
       </form>
     </div>
     <div id="surveys_index">

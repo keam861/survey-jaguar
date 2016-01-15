@@ -1,5 +1,9 @@
 <div id="content">
-  <h2>Welcome current_user.name</h2>
+  <h2>Welcome <%=current_user.name%></h2>
+
+  <a href="/update_user">Edit your profile</a>
+  <a href="/delete_user/<%=current_user.id%>">Delete your account</a>
+
   <div id="user_surveys">
     <div id="current_surveys">
       <h2>Your current surveys</h2>
