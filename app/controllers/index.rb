@@ -3,3 +3,8 @@ get '/' do
   # que esta en app/views/index.erb
   erb :index
 end
+
+get '/user_profile' do
+
+erb :user_profile
+end
