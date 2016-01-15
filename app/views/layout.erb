@@ -17,16 +17,26 @@
   <title></title>
 </head>
 <body>
+
   <div class="container">
-<div id="errors">
+    <header>
+      <img id="logo" src="/img/codea-logo.png" alt="Codea Camp">
+    </header>
+    <div id="errors">
 
-<% if @notice %>
-  <%= @notice %>
-<% end%>
-
-
-    <%= yield %>
+      <% if @notice %>
+       <%= @notice %>
+      <% end%>
+    </div>
+    <% if session[:user_id] %> 
+      <a href="/destroy_session">Log out</a>
+    <% end %>
     
+    <%= yield %>
+    <footer>
+      <p>Developed by Jaguares Team</p>
+      <p>&copy; CodeaCamp</p>
+    </footer>
   </div>
 </body>
 </html>

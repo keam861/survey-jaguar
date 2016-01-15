@@ -1,16 +1,25 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
-th {
-  text-align: left;
-}
+#content {
+  margin: 0 auto;
+  width: 80%;
+/*  padding: 0px 20px 20px 20px;
+*/  margin-top: 0;
+/*  border: 1px dotted black;
+*/}
 
 header {
   background-color: black;
   height: 100px;
+}
+#sigin, #signup {
+  float: right;
+  padding: 15px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+#surveys_index {
+  clear: right;
 }
 h1 {
   text-align: center;
@@ -20,4 +29,29 @@ h1 {
 #logo {
   display: block;
   margin: 0 auto;
+}
+input {
+  margin: 5px;
+  padding: 5px;
+}
+.button {
+ border-radius: 10px;
+ float: right;
+ padding: 10px;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #aaa));
+
+}
+footer {
+  border-top: 1px dotted #999;
+}
+footer p{
+  text-align: center;
+  font-size: small;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #999;
+}
+
+.clear {
+  clear: both;
 }
