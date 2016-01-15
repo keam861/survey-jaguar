@@ -1,0 +1,10 @@
+<h1>Update</h1>
+<form name="sign_up" action="/update_user/<%=current_user.id%>" method="post">
+    <input autofocus id="contact_name" type="text" size="40" name="user[name]" value="<%=current_user.name%>" placeholder="Nombre">
+    <br>
+    <input id="contact_email" type="text" size="40" name="user[email]" value="<%=current_user.email%>" placeholder="Email">
+    <br>
+    <input id="password" type="password" name="user[password]" placeholder="Password">
+    <br>
+    <button id="contact_btn" type="submit">Actualizar</button>
+  </form>
