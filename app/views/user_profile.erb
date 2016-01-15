@@ -1,5 +1,5 @@
 <div id="content">
-  <h2>Welcome <%=current_user.name%></h2>
+  <h2>Welcome <%= current_user.name%></h2>
 
   <a href="/update_user">Edit your profile</a>
   <a href="/delete_user/<%=current_user.id%>">Delete your account</a>
@@ -37,7 +37,7 @@
     </div>
     <hr>
   </div>
-  <form action="">
+  <form action="/new_survey1" method="get"> 
     <input type="submit" value="Create a new survey">
   </form>
   <hr>

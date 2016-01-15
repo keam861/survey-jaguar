@@ -3,22 +3,23 @@ get '/destroy_session' do
   redirect('/')
 end
 
-get '' do
+# get '' do
     
-end
+# end
 
 post '/create_session' do
  
- email = params[:email]
+ email =params[:email]
  password =params[:password]
  puts params
  puts password
+ puts "+" * 50
 
  user = User.authenticate(email, password)
   
   if user 
     session[:user_id] = user.id
-    # puts "+" * 50
+     # puts "+" * 50
 
     # erb :user_profile
     redirect to("/user_profile/#{user.id}")
