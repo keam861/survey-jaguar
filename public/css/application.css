@@ -1,3 +1,9 @@
+.img-index {
+  background-image: url(/img/photo-jaguar03.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #000;
+}
 #content {
   margin: 0 auto;
   width: 80%;
@@ -13,18 +19,35 @@ header {
 #sigin, #signup {
   float: right;
   padding: 15px;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(250, 250, 250, .5);
   border-radius: 20px;
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 #surveys_index {
   clear: right;
+  text-align: center;
 }
 h1 {
   text-align: center;
   font-size: 27px;
-  margin: 30px 0; 
+  margin: 30px 10px;
+
+}
+h2 {
+  color: #fff;
+}
+#welcome {
+  float: left;
+  font-style: italic;
+  font-size: 72px;
+  text-align: right;
+  width: 400px;
+  margin-top: 100px;
+  color: rgba(250, 250, 250, .5);
+}
+body {
+  font-family: 'Ubuntu', sans-serif;
 }
 #logo {
   display: block;
@@ -38,11 +61,23 @@ input {
  border-radius: 10px;
  float: right;
  padding: 10px;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #aaa));
-
+background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #aaa));
+}
+.button:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fdb93b), color-stop(1, #b2802a));
+  border-top:  #fdb93b;
+}
+#surveys_index li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 40px;
+}
+a {
+  text-decoration: none;
+  text-align: center;
 }
 footer {
-  border-top: 1px dotted #999;
+  border-top: 1px dotted #fff;
 }
 footer p{
   text-align: center;
