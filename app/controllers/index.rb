@@ -6,5 +6,5 @@ end
 
 get '/user_profile' do
 
-erb :user_profile
+  erb :user_profile
 end

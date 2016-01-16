@@ -1,0 +1,13 @@
+<h1><%= @survey.survey_name%></h1>
+<form action="/modify_survey" method="get">
+  <% @questions.each do |question|%>
+    <h3><%= question.question %></h3>
+  <%end%>
+  
+  <% @choices.each do |choice_array| %>
+    <% choice_array.each do |choice| %>
+      <h3><%= choice.choice %></h3>
+    <%end%>
+  <%end%>
+  <input type="submit" value="edit" name="edit">
+</form>

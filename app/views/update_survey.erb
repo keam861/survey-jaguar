@@ -1,0 +1,21 @@
+<div id="content">
+  <form name="modify" action=<%= "/modify_survey/#{@survey.id}" %> method="post">
+    <p>Name your survey:</p>
+    <input type="text" name="survey_name" value="<%= @survey.survey_name %>" >
+    
+    <p>Write question</p>
+    <input type="text" name="question" value="<%= @survey.questions.first.question %>">
+    
+    <% numbers = ["first", "second", "third"] %>
+
+    <% @survey.questions.first.choices.each_with_index do |choice, index| %>
+       <p><%= "Write #{numbers[index]} choice" %></p>
+        <input type="text" name=<%= "choices[#{choice.id}]" %> value="<%= choice.choice %>">
+    <% end %>
+
+
+    
+    <br>
+    <input type="submit" value="Update survey">
+  </form>
+</div>

@@ -1,19 +1,35 @@
 <div id="content">
-  <h2>Welcome <%= current_user.name%></h2>
+  <h1>Welcome <%= current_user.name%></h1>
 
+ <!--  <%#if true%>
+  <h3><%= @notice %></h3>
+  <%#end %> -->
   <a href="/update_user">Edit your profile</a>
+  <br>
   <a href="/delete_user/<%=current_user.id%>">Delete your account</a>
 
   <div id="user_surveys">
     <div id="current_surveys">
-      <h2>Your current surveys</h2>
-      <p>Survey 5</p>
-      <input type="submit" value="View">
-      <p>Survey 4</p>
-      <input type="submit" value="View">
+      <h3>Your surveys</h3>
+      <% surveys = Survey.all %>
+      <% surveys.each do |surv| %>
+        <ul>
+          <li><a href="/survey_view/<%=surv.id%>" name="survey_link"><%= surv.survey_name %></a></li>
+          <li><a href="/survey/edit/<%=surv.id%>" name="update_survey">Edit</a></li>
+          <li><a href="/delete_survey/<%=surv.id%>" name="delete_survey">Delete</a></li>
+        </ul> 
+      <!--   <ul>
+          <form action="/survey_view" method="post">
+          <li><input  type="submit" name="<%=surv%>" value="<%=surv.survey_name%>"></li>
+          <li><input  type="submit" name="update_survey" value="update"></li>
+          <li><input  type="submit" name="delete_survey" value="delete"></li>
+          </form>
+        </ul> -->
+      <br>
+      <% end %>
     </div>
     <div id="past_surveys">
-      <h2>Your past surveys</h2>
+      <!-- <h3>Other users surveys</h3>
       <ul>
         <li>
           <p>Survey 3</p>
@@ -36,7 +52,7 @@
       </ul>
     </div>
     <hr>
-  </div>
+  </div> -->
   <form action="/new_survey1" method="get"> 
     <input type="submit" value="Create a new survey">
   </form>
